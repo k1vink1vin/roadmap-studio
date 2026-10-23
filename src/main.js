@@ -405,7 +405,7 @@ function closeGitHubStorage(){$('#githubModal').classList.remove('show')}
 async function refreshGitHubProjects(){
  const list=$('#ghProjectList');if(!list)return;list.innerHTML='<div class="empty">正在讀取 GitHub…</div>';githubStatus('正在連線 GitHub…');
  try{
-  const cfg=saveGithubConfig(),data=await githubRequest(cfg.folder);
+  const cfg=saveGithubConfig(),data=await githubRequest(cfg.folder,{allow404:true});
   const files=(Array.isArray(data)?data:[]).filter(x=>x.type==='file'&&(x.name.endsWith('.roadmap.json')||x.name.endsWith('.roadmap')||x.name.endsWith('.json'))).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
   list.innerHTML='';
   if(!files.length){list.innerHTML='<div class="empty">這個資料夾目前沒有 Roadmap 專案。</div>';githubStatus('已連線，沒有專案','ok');return}
