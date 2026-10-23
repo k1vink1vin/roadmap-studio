@@ -213,3 +213,29 @@ body.launch-dark .lane-order-head .tb:hover{
 body.launch-dark .lane-order-box .hint{
   color:#9eafc2;
 }
+
+.github-modal{width:min(760px,calc(100vw - 32px));max-height:min(82vh,760px);overflow:auto}
+.github-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.github-modal-head h2{margin:0 0 4px}
+.github-config-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.github-modal label{display:block;font-size:11px;font-weight:700;color:#667085;margin:8px 0 4px}
+.github-modal input{width:100%;border:1px solid var(--border);border-radius:8px;background:#fff;padding:8px 9px;color:#344054}
+.github-save-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;margin:14px 0 8px}
+.github-status{min-height:20px;font-size:11px;color:#667085;margin:6px 0 10px}
+.github-status.ok{color:#067647}.github-status.error{color:#b42318}
+.github-project-list{display:grid;gap:6px}
+.github-project-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 10px;border:1px solid var(--border);border-radius:8px;background:#fff}
+.github-project-meta{min-width:0;display:flex;flex-direction:column;gap:2px}
+.github-project-meta b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#344054}
+.github-project-meta small{color:#98a2b3;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+.github-project-actions{display:flex;gap:6px;flex:0 0 auto}
+.github-project-actions .tb{min-width:62px}
+body.launch-dark .github-modal label{color:#c7d2df}
+body.launch-dark .github-modal input{background:#101923;color:#f2f6fb;border-color:#344457}
+body.launch-dark .github-project-row{background:#101923;border-color:#344457}
+body.launch-dark .github-project-meta b{color:#e5edf6}
+body.launch-dark .github-project-meta small{color:#91a3b7}
+body.launch-dark .github-status{color:#9eafc2}
+body.launch-dark .github-status.ok{color:#6ce9a6}
+body.launch-dark .github-status.error{color:#fda29b}
+@media(max-width:720px){.github-config-grid{grid-template-columns:1fr}.github-save-row{grid-template-columns:1fr}.github-project-row{align-items:flex-start;flex-direction:column}.github-project-actions{width:100%}.github-project-actions .tb{flex:1}}
