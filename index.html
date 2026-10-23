@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="theme-color" content="#101828" />
 <title>Roadmap Studio V4.0</title>
-<link rel="stylesheet" href="./src/styles.css?v=20261023-9" />
+<link rel="stylesheet" href="./src/styles.css?v=20261023-10" />
 </head>
 <body>
 <button class="tb present-exit" onclick="RoadmapApp.togglePresentation()">離開簡報</button>
 <div class="app">
  <div class="topbar">
   <div class="brand">Roadmap <span>Studio V4.0</span></div>
-  <div class="toolbar-group"><button class="tb" onclick="RoadmapApp.newProject()" title="建立新專案">新專案</button><button class="tb" onclick="document.getElementById('importFile').click()" title="開啟 .roadmap / JSON">開啟</button><button class="tb" onclick="RoadmapApp.exportProject()" title="儲存 Roadmap 專案檔">儲存檔</button><input id="importFile" type="file" accept=".roadmap,.json" hidden></div>
+  <div class="toolbar-group"><button class="tb" onclick="RoadmapApp.newProject()" title="建立新專案">新專案</button><button class="tb" onclick="document.getElementById('importFile').click()" title="開啟 .roadmap / JSON">開啟</button><button class="tb" onclick="RoadmapApp.exportProject()" title="儲存 Roadmap 專案檔">儲存檔</button><button class="tb" onclick="RoadmapApp.openGitHubStorage()" title="儲存 / 讀取 GitHub Roadmap">GitHub</button><input id="importFile" type="file" accept=".roadmap,.json" hidden></div>
   <div class="toolbar-group"><button class="tb" id="undoBtn" onclick="RoadmapApp.undo()">↶</button><button class="tb" id="redoBtn" onclick="RoadmapApp.redo()">↷</button></div>
   <div class="toolbar-group"><button class="tb primary" onclick="RoadmapApp.addNode()">＋ 節點</button><button class="tb" onclick="RoadmapApp.duplicateSelected()">⧉ 複製</button><button class="tb" onclick="RoadmapApp.autoLayout()">智慧排版</button><button class="tb" onclick="RoadmapApp.syncRoadmapLayout()">依欄位定位</button></div>
   <div class="toolbar-group pending-sync"><button class="tb" id="refreshCanvasBtn" onclick="RoadmapApp.flushPendingCanvas()">更新畫布</button><span class="pending-badge" id="pendingCanvasBadge">畫布已同步</span></div>
@@ -75,9 +75,29 @@
  </div>
 </div>
 <div class="toast" id="toast"></div>
+<div class="modalback" id="githubModal">
+ <div class="modal github-modal">
+  <div class="github-modal-head"><div><h2>GitHub 專案庫</h2><div class="hint">將 Roadmap JSON 儲存在 GitHub repository。</div></div><button class="tb" onclick="RoadmapApp.closeGitHubStorage()">關閉</button></div>
+  <div class="github-config-grid">
+   <label>Owner<input id="ghOwner" value="k1vink1vin"></label>
+   <label>Repository<input id="ghRepo" value="roadmap-studio"></label>
+   <label>Branch<input id="ghBranch" value="main"></label>
+   <label>資料夾<input id="ghFolder" value="projects"></label>
+  </div>
+  <label>Fine-grained token<input id="ghToken" type="password" autocomplete="off" placeholder="github_pat_..."></label>
+  <div class="hint">建議 token 只授權目標 repository 的 Contents: Read and write。Token 只保存在目前分頁，不會寫入專案或 GitHub。</div>
+  <div class="github-save-row">
+   <input id="ghFileName" placeholder="project-name.roadmap.json">
+   <button class="tb strong" id="ghSaveBtn" onclick="RoadmapApp.saveProjectToGitHub()">儲存到 GitHub</button>
+   <button class="tb" onclick="RoadmapApp.refreshGitHubProjects()">重新整理</button>
+  </div>
+  <div class="github-status" id="ghStatus"></div>
+  <div class="github-project-list" id="ghProjectList"><div class="empty">按「重新整理」讀取 GitHub 專案。</div></div>
+ </div>
+</div>
 <div class="modalback" id="templateModal"><div class="modal"><h2>範例模板庫</h2><div class="template-grid"><button class="template" onclick="RoadmapApp.applyTemplate('blank')"><b>Blank</b><br><small>空白專案</small></button><button class="template" onclick="RoadmapApp.applyTemplate('technology')"><b>Technology Roadmap</b><br><small>世代 × 產品線</small></button><button class="template" onclick="RoadmapApp.applyTemplate('product')"><b>Product Roadmap</b><br><small>季度 × 團隊</small></button></div><p><button class="tb" onclick="RoadmapApp.closeTemplates()">關閉</button></p></div></div>
 
 <script id="initialData" type="application/json">null</script>
-<script type="module" src="./src/main.js?v=20261023-7"></script>
+<script type="module" src="./src/main.js?v=20261023-10"></script>
 </body>
 </html>
