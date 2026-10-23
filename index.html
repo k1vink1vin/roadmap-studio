@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#101828" />
+<title>Roadmap Studio V4.0</title>
+<link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+<button class="tb present-exit" onclick="RoadmapApp.togglePresentation()">離開簡報</button>
+<div class="app">
+ <div class="topbar">
+  <div class="brand">Roadmap <span>Studio V4.0</span></div>
+  <div class="toolbar-group"><button class="tb" onclick="RoadmapApp.newProject()" title="建立新專案">新專案</button><button class="tb" onclick="document.getElementById('importFile').click()" title="開啟 .roadmap / JSON">開啟</button><button class="tb" onclick="RoadmapApp.exportProject()" title="儲存 Roadmap 專案檔">儲存檔</button><input id="importFile" type="file" accept=".roadmap,.json" hidden></div>
+  <div class="toolbar-group"><button class="tb" id="undoBtn" onclick="RoadmapApp.undo()">↶</button><button class="tb" id="redoBtn" onclick="RoadmapApp.redo()">↷</button></div>
+  <div class="toolbar-group"><button class="tb primary" onclick="RoadmapApp.addNode()">＋ 節點</button><button class="tb" onclick="RoadmapApp.duplicateSelected()">⧉ 複製</button><button class="tb" onclick="RoadmapApp.autoLayout()">智慧排版</button><button class="tb" onclick="RoadmapApp.syncRoadmapLayout()">依欄位定位</button></div>
+  <div class="toolbar-group pending-sync"><button class="tb" id="refreshCanvasBtn" onclick="RoadmapApp.flushPendingCanvas()">更新畫布</button><span class="pending-badge" id="pendingCanvasBadge">畫布已同步</span></div>
+  <div class="toolbar-group hide-sm"><button class="tb" onclick="RoadmapApp.align('left')">左對齊</button><button class="tb" onclick="RoadmapApp.align('center')">置中</button><button class="tb" onclick="RoadmapApp.distribute('h')">水平等距</button></div>
+  <div class="spacer"></div>
+  <div class="toolbar-group"><button class="tb" onclick="RoadmapApp.toggleSearch()" title="搜尋">⌕</button><button class="tb" onclick="RoadmapApp.fitView()" title="完整顯示時間軸、泳道與節點">適合畫面</button><span class="zoomlabel" id="zoomLabel">100%</span><button class="tb" onclick="RoadmapApp.zoomBy(-.1)">−</button><button class="tb" onclick="RoadmapApp.zoomBy(.1)">＋</button></div>
+  <div class="toolbar-group"><button class="tb" onclick="RoadmapApp.takeSnapshot()" title="建立版本快照">快照</button><button class="tb" onclick="RoadmapApp.exportPNG()">發表 PNG</button><button class="tb" onclick="RoadmapApp.exportHTML()">HTML</button><button class="tb" onclick="RoadmapApp.togglePresentation()" title="簡報模式">簡報</button></div>
+ </div>
+ <div class="tabsbar" id="tabs"></div>
+ <div class="main">
+  <aside class="left">
+   <div class="panel-title">Roadmap 設定</div>
+   <div class="panel stack">
+    <label>泳道依據欄位<select id="laneFieldSelect"></select></label>
+    <label>時間軸依據欄位<select id="timeFieldSelect"></select></label>
+    <label>同格上下排序欄位<select id="sortFieldSelect"><option value="">依關係自動排序</option></select></label>
+    <label><input type="checkbox" id="autoSyncToggle" checked> 更新畫布時自動定位</label>
+    <button onclick="RoadmapApp.openTemplates()">▦ 範例模板</button>
+    <div class="hint">右側可連續修改多個節點；按上方「更新畫布」後一次同步、定位與重畫。</div>
+   </div>
+   <div class="panel-title">節點內容</div>
+   <div class="panel stack">
+    <div class="row" style="display:flex;gap:8px">
+     <button id="expandNodeContent" style="flex:1">全部展開</button>
+     <button id="collapseNodeContent" style="flex:1">全部摺疊</button>
+    </div>
+    <div class="hint" id="nodeContentStateHint">目前：全部展開</div>
+    <div id="displayFields" class="display-fields"></div>
+    <div class="hint">節點名稱固定顯示；勾選要統一顯示的自訂欄位。</div>
+   </div>
+   <div class="panel-title">顯示與連線</div>
+   <div class="panel stack">
+    <label><input type="checkbox" id="snapToggle" checked> 吸附格線</label>
+    <label><input type="checkbox" id="guideToggle" checked> Smart Guides</label>
+    <label><input type="checkbox" id="relationsToggle" checked> 顯示連接關係</label>
+    <label><input type="checkbox" id="relationLabelsToggle" checked> 顯示連線名稱</label>
+    <label>畫面模式<select id="displayModeSelect"><option value="light">淺色</option><option value="launchDark">深色</option></select></label>
+    <button onclick="RoadmapApp.showAllRelationships()">顯示所有已隱藏連線</button>
+   </div>
+   <div class="panel-title">全域樣式</div>
+   <div class="panel stack">
+    <label>節點樣式<select id="nodeStyleSelect"><option value="presentation">簡報卡片</option><option value="outline">極簡框線</option><option value="header">色帶標題</option><option value="soft">柔和填色</option><option value="compact">緊湊卡片</option></select></label>
+    <label>節點圓角 <input id="radiusRange" type="range" min="0" max="28" value="12"></label>
+    <label>節點內距 <input id="paddingRange" type="range" min="6" max="24" value="12"></label>
+    <label>連線粗細 <input id="edgeRange" type="range" min="1" max="5" value="2"></label>
+    <button onclick="RoadmapApp.resetGlobalStyles()">↺ 回復樣式預設值</button>
+   </div>
+  </aside>
+  <section class="canvas-wrap" id="viewport">
+   <div class="searchbox" id="searchbox"><input id="searchInput" placeholder="搜尋節點、欄位…"></div>
+   <div class="canvas" id="canvas"><svg class="edges" id="edges"></svg><div id="lanesLayer"></div><div id="nodesLayer"></div><div id="guidesLayer"></div></div>
+   <div class="layout-report" id="layoutReport"></div><div class="minimap" id="minimap"><div class="minimap-title">MINIMAP</div><canvas id="miniNodes" width="196" height="132" style="position:absolute;inset:0;width:196px;height:132px;pointer-events:none"></canvas><div class="mini-view" id="miniView"></div></div>
+  </section>
+  <aside class="right" id="inspector"><div class="empty">選擇一個節點以編輯內容</div></aside>
+ </div>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modalback" id="templateModal"><div class="modal"><h2>範例模板庫</h2><div class="template-grid"><button class="template" onclick="RoadmapApp.applyTemplate('blank')"><b>Blank</b><br><small>空白專案</small></button><button class="template" onclick="RoadmapApp.applyTemplate('technology')"><b>Technology Roadmap</b><br><small>世代 × 產品線</small></button><button class="template" onclick="RoadmapApp.applyTemplate('product')"><b>Product Roadmap</b><br><small>季度 × 團隊</small></button></div><p><button class="tb" onclick="RoadmapApp.closeTemplates()">關閉</button></p></div></div>
+
+<script id="initialData" type="application/json">null</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
