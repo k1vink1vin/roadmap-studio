@@ -170,3 +170,46 @@ body.launchDark .lane-order-box .hint,
 [data-theme="dark"] .lane-order-box .hint{
   color:#94a3b8;
 }
+
+body.launch-dark .lane-order-box{
+  background:#0f1822;
+  border-color:#263546;
+}
+body.launch-dark .lane-order-head{
+  color:#c7d2df;
+}
+body.launch-dark .lane-order-row{
+  background:#101923;
+  border-color:#344457;
+  color:#eef3f8;
+}
+body.launch-dark .lane-order-row>span{
+  color:#dce6f0;
+}
+body.launch-dark .lane-order-btn{
+  background:#141f2b;
+  border-color:#344457;
+  color:#eef3f8;
+}
+body.launch-dark .lane-order-btn:hover:not(:disabled){
+  background:#1b2a39;
+  border-color:#496078;
+}
+body.launch-dark .lane-order-btn:disabled{
+  background:#263240;
+  border-color:#344457;
+  color:#708196;
+  opacity:.55;
+}
+body.launch-dark .lane-order-head .tb{
+  background:#141f2b;
+  border-color:#344457;
+  color:#eef3f8;
+}
+body.launch-dark .lane-order-head .tb:hover{
+  background:#1b2a39;
+  border-color:#496078;
+}
+body.launch-dark .lane-order-box .hint{
+  color:#9eafc2;
+}
