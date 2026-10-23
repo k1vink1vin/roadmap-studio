@@ -71,11 +71,11 @@ function moveLaneOrder(name,delta){
  const values=orderedLaneValues(p,new Set(p.nodes.map(n=>dimensionValue(n,field,'未分類'))));
  const i=values.indexOf(name),j=i+delta;if(i<0||j<0||j>=values.length)return;
  pushHistory();[values[i],values[j]]=[values[j],values[i]];p.roadConfig.laneOrderByField[field]=values;
- autoLayout({history:false});renderRoadmapControls();toast('泳道順序已更新')
+ autoLayout({history:false});toast('泳道順序已更新')
 }
 function resetLaneOrder(){
  const p=page();ensurePageV2(p);pushHistory();delete p.roadConfig.laneOrderByField[p.roadConfig.laneField];
- autoLayout({history:false});renderRoadmapControls();toast('泳道順序已恢復自動排序')
+ autoLayout({history:false});toast('泳道順序已恢復自動排序')
 }
 function dimensionValue(n,key,fallback){const v=n.fields?.[key];return v===undefined||v===null||String(v).trim()===''?fallback:String(v).trim()}
 function syncRoadmapDimensions(reposition=false){const p=page();ensurePageV2(p);const cfg=p.roadConfig;
