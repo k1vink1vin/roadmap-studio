@@ -1,0 +1,1752 @@
+{
+  "name": "My Roadmap",
+  "theme": "emerald",
+  "activePageId": "5a20968b-0f17-44a4-b1a0-1cc28bda173d",
+  "pages": [
+    {
+      "id": "cfb34bc2-ec69-424e-856a-eebcb82fc1b4",
+      "name": "Mediatek",
+      "nodes": [
+        {
+          "id": "641597dc-6f43-4324-ad33-54cbb3896877",
+          "title": "Dimensity\n9000",
+          "description": "",
+          "x": 210,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2021",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "e4a430db-b49d-4b8d-b758-9583e7ee5ea0",
+          "title": "Dimensity\n9200",
+          "description": "",
+          "x": 510,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2022",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "7cc98c26-c8d1-4cf9-ac37-17f9aacbd147",
+          "title": "Dimensity\n9300",
+          "description": "",
+          "x": 810,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2023",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "80212667-75b0-4a60-abe1-5ec6f37a0e16",
+          "title": "Dimensity\n9400",
+          "description": "",
+          "x": 1110,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2024",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "4818747e-634b-4e83-a3dd-f234e372fd68",
+          "title": "Dimensity\n9500",
+          "description": "",
+          "x": 1410,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "05f0d694-5e46-424a-b0ce-b9380cdff864",
+          "title": "Dimensity\n9600 Pro",
+          "description": "",
+          "x": 1710,
+          "y": 112,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "2nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "64eed70d-5e22-488d-91b2-a100e89c5a22",
+          "title": "Dimensity\n9000+",
+          "description": "",
+          "x": 510,
+          "y": 201,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2022",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "c63bb2e8-cfee-4608-bf1d-de89878e3173",
+          "title": "Dimensity\n9200+",
+          "description": "",
+          "x": 810,
+          "y": 201,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2023",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "e6eb7e72-8b4a-42ac-bdc6-26331dcc0563",
+          "title": "Dimensity\n9300+",
+          "description": "",
+          "x": 1110,
+          "y": 201,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2024",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "0b4a680e-67f5-4f1e-9071-dbcc78e59c4a",
+          "title": "Dimensity\n9400e",
+          "description": "",
+          "x": 1410,
+          "y": 201,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "bcefffda-4a62-4efe-8244-76fef758e7af",
+          "title": "Dimensity\n9400+",
+          "description": "",
+          "x": 1410,
+          "y": 290,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "05e72ee1-0e89-4a24-b4ff-16f7d3870b5e",
+          "title": "Dimensity\n9500s",
+          "description": "",
+          "x": 1710,
+          "y": 201,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "965e8876-b5fb-4910-b0ae-42c3732ee40e",
+          "title": "Dimensity\n9600M",
+          "description": "",
+          "x": 1710,
+          "y": 290,
+          "w": 180,
+          "h": 96,
+          "laneId": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "b0007805-378f-41ec-b97f-8a1f970bbc58",
+          "title": "Dimensity\n8000",
+          "description": "",
+          "x": 510,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2022",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "5nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "8cff6476-e5cc-4241-93d5-a0697969d50b",
+          "title": "Dimensity\n8050",
+          "description": "",
+          "x": 510,
+          "y": 540,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2022",
+            "Tier": "3",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "e29bcb15-2434-4022-a1e1-9027b9096ac4",
+          "title": "Dimensity\n8020",
+          "description": "",
+          "x": 210,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2021",
+            "Tier": "3",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "6dd50b91-6c4e-4e88-9df0-88c10214c4f1",
+          "title": "Dimensity\n8100",
+          "description": "",
+          "x": 510,
+          "y": 629,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2022",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "5nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "8c68cd84-4566-4c68-8250-1e68bbe2c786",
+          "title": "Dimensity\n8200",
+          "description": "",
+          "x": 810,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2023",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "63b5a3c8-1897-470f-8e8b-d03f302b7a6b",
+          "title": "Dimensity\n8250",
+          "description": "",
+          "x": 1110,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2024",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "56458683-be4e-4afe-8744-179005880379",
+          "title": "Dimensity\n8300",
+          "description": "",
+          "x": 1110,
+          "y": 540,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2024",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "c4ae9405-eaa8-4986-a22f-f825a6514748",
+          "title": "Dimensity\n8350",
+          "description": "",
+          "x": 1110,
+          "y": 629,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2024",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "b5c8d6aa-06ba-4e20-a421-dbb817b1892b",
+          "title": "Dimensity\n8400",
+          "description": "",
+          "x": 1410,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2025",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "8623bd86-b791-4e5d-8cce-114a3be01f0e",
+          "title": "Dimensity\n8450",
+          "description": "",
+          "x": 1410,
+          "y": 540,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "e9fafa68-6289-4ad2-be6a-151fb488b499",
+          "title": "Dimensity\n8500",
+          "description": "",
+          "x": 1710,
+          "y": 451,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2026",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "3224382f-d223-431a-b7c4-6951b8d28a5a",
+          "title": "Dimensity\n8550",
+          "description": "",
+          "x": 1710,
+          "y": 540,
+          "w": 180,
+          "h": 96,
+          "laneId": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "parentId": null,
+          "color": "#ed7d31",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Premium"
+          }
+        },
+        {
+          "id": "1b2ba79e-287b-4e9f-93a6-ac8a4b977f7e",
+          "title": "Dimensity\n7020",
+          "description": "",
+          "x": 510,
+          "y": 790,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2022",
+            "Tier": "4",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "cdb4f319-ecb1-4913-bf5b-3c35b377856b",
+          "title": "Dimensity\n7025",
+          "description": "",
+          "x": 1110,
+          "y": 790,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2024",
+            "Tier": "4",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "21dafacf-48ac-44d3-a1fb-6a493a439d55",
+          "title": "Dimensity\n7030",
+          "description": "",
+          "x": 510,
+          "y": 879,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2022",
+            "Tier": "3",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "e70e8fc9-450a-477d-8c86-96486ecf933e",
+          "title": "Dimensity\n7050",
+          "description": "",
+          "x": 510,
+          "y": 968,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2022",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "5f26f4ff-2637-433d-910a-d8c53b856426",
+          "title": "Dimensity\n7060",
+          "description": "",
+          "x": 1410,
+          "y": 790,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2025",
+            "Tier": "3",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "808717e5-3cde-4903-8cac-77cf0c820ca2",
+          "title": "Dimensity\n7100",
+          "description": "",
+          "x": 1410,
+          "y": 879,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2025",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "80a4e7cb-14f8-46bc-b6b1-8ed28f532d34",
+          "title": "Dimensity\n7200",
+          "description": "",
+          "x": 810,
+          "y": 790,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2023",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "18b8efdf-ed45-47d8-8941-d24e1a012a62",
+          "title": "Dimensity\n7300e",
+          "description": "",
+          "x": 1710,
+          "y": 790,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2026",
+            "Tier": "2",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "6nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "e63be2f9-d82e-4bdc-a1ed-351f9331bc1b",
+          "title": "Dimensity\n7300",
+          "description": "",
+          "x": 1110,
+          "y": 879,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2024",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "e96aa1e0-b821-4792-82ee-bd7d8239e046",
+          "title": "Dimensity\n7360",
+          "description": "",
+          "x": 1410,
+          "y": 968,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2025",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "7acbcda5-3895-4bb3-9aab-8a40894f69ff",
+          "title": "Dimensity\n7350",
+          "description": "",
+          "x": 1110,
+          "y": 968,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2024",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "0a6b4869-abed-45f1-b752-7578e044c831",
+          "title": "Dimensity\n7400",
+          "description": "",
+          "x": 1410,
+          "y": 1057,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "a9e71c28-7297-40e5-84cc-957843c68e71",
+          "title": "Dimensity\n7450",
+          "description": "",
+          "x": 1710,
+          "y": 879,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2026",
+            "Tier": "1",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        },
+        {
+          "id": "a626ea3f-a931-4324-8881-30aa50e56371",
+          "title": "Dimensity\n7500",
+          "description": "",
+          "x": 1710,
+          "y": 968,
+          "w": 180,
+          "h": 96,
+          "laneId": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "parentId": null,
+          "color": "#f4b183",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Mainstream"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "c92f31f3-4670-483b-9999-1be979ae4547",
+          "source": "641597dc-6f43-4324-ad33-54cbb3896877",
+          "target": "e4a430db-b49d-4b8d-b758-9583e7ee5ea0",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "6ee360f0-68e8-4c50-a1b5-94d28d565726",
+          "source": "e4a430db-b49d-4b8d-b758-9583e7ee5ea0",
+          "target": "7cc98c26-c8d1-4cf9-ac37-17f9aacbd147",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "b2203683-85ad-4e75-87e6-51420d15b71f",
+          "source": "7cc98c26-c8d1-4cf9-ac37-17f9aacbd147",
+          "target": "80212667-75b0-4a60-abe1-5ec6f37a0e16",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "c05985fb-1bc5-4ac2-b70c-3cad4d4fc5db",
+          "source": "80212667-75b0-4a60-abe1-5ec6f37a0e16",
+          "target": "4818747e-634b-4e83-a3dd-f234e372fd68",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ED7D31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "7696db88-4c0c-48d2-9825-7d22903b4cd3",
+          "source": "4818747e-634b-4e83-a3dd-f234e372fd68",
+          "target": "05f0d694-5e46-424a-b0ce-b9380cdff864",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "40105ab1-a8ce-4959-9ffe-535503f85f83",
+          "source": "641597dc-6f43-4324-ad33-54cbb3896877",
+          "target": "64eed70d-5e22-488d-91b2-a100e89c5a22",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "cc2a3de5-f22e-4e13-bbf3-1e848025ec1d",
+          "source": "e4a430db-b49d-4b8d-b758-9583e7ee5ea0",
+          "target": "c63bb2e8-cfee-4608-bf1d-de89878e3173",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "0b99b998-a55e-4fdd-b6e7-34af12b19df6",
+          "source": "7cc98c26-c8d1-4cf9-ac37-17f9aacbd147",
+          "target": "e6eb7e72-8b4a-42ac-bdc6-26331dcc0563",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "860f52f1-3af8-4890-a18a-da6f6cd4e2b1",
+          "source": "e6eb7e72-8b4a-42ac-bdc6-26331dcc0563",
+          "target": "0b4a680e-67f5-4f1e-9071-dbcc78e59c4a",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "45ccb3d2-0654-4aca-8b48-ef3ba5aa2b49",
+          "source": "80212667-75b0-4a60-abe1-5ec6f37a0e16",
+          "target": "bcefffda-4a62-4efe-8244-76fef758e7af",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "c950caeb-fb37-4f15-8028-21dfeff8fc1a",
+          "source": "bcefffda-4a62-4efe-8244-76fef758e7af",
+          "target": "05e72ee1-0e89-4a24-b4ff-16f7d3870b5e",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "f4c79953-cf99-4fbe-8564-460ad9dab84f",
+          "source": "4818747e-634b-4e83-a3dd-f234e372fd68",
+          "target": "965e8876-b5fb-4910-b0ae-42c3732ee40e",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": false
+        },
+        {
+          "id": "531406a6-1b28-4400-bba2-13e105ae3848",
+          "source": "e29bcb15-2434-4022-a1e1-9027b9096ac4",
+          "target": "8cff6476-e5cc-4241-93d5-a0697969d50b",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "cd2fc7b3-a70b-47ac-8b6b-43d60eee5619",
+          "source": "8c68cd84-4566-4c68-8250-1e68bbe2c786",
+          "target": "63b5a3c8-1897-470f-8e8b-d03f302b7a6b",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "82be5a67-ef4a-4a1e-8b4a-6975cfb32e09",
+          "source": "6dd50b91-6c4e-4e88-9df0-88c10214c4f1",
+          "target": "8c68cd84-4566-4c68-8250-1e68bbe2c786",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "67e68564-f0ae-4a0e-a358-8e39381228f5",
+          "source": "8c68cd84-4566-4c68-8250-1e68bbe2c786",
+          "target": "56458683-be4e-4afe-8744-179005880379",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "9408b2e6-2eb4-4552-b1e0-8477d124d3f4",
+          "source": "56458683-be4e-4afe-8744-179005880379",
+          "target": "b5c8d6aa-06ba-4e20-a421-dbb817b1892b",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "71da5e1e-f8f1-4cdb-94c4-f9ac22d6d76a",
+          "source": "b5c8d6aa-06ba-4e20-a421-dbb817b1892b",
+          "target": "e9fafa68-6289-4ad2-be6a-151fb488b499",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "bfd845bf-0979-4f22-b9a3-56709f1affbf",
+          "source": "80a4e7cb-14f8-46bc-b6b1-8ed28f532d34",
+          "target": "e63be2f9-d82e-4bdc-a1ed-351f9331bc1b",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "66c326ff-478c-4e1f-9790-c90e1c7cacb1",
+          "source": "e70e8fc9-450a-477d-8c86-96486ecf933e",
+          "target": "808717e5-3cde-4903-8cac-77cf0c820ca2",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "fd8b9efa-6a87-434a-8136-c124189bc42c",
+          "source": "e63be2f9-d82e-4bdc-a1ed-351f9331bc1b",
+          "target": "e96aa1e0-b821-4792-82ee-bd7d8239e046",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "9cc04b86-3774-436e-83b5-3a33c8b585c1",
+          "source": "808717e5-3cde-4903-8cac-77cf0c820ca2",
+          "target": "18b8efdf-ed45-47d8-8941-d24e1a012a62",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "6489e0cc-724a-496c-8260-0517032b82f9",
+          "source": "0a6b4869-abed-45f1-b752-7578e044c831",
+          "target": "a9e71c28-7297-40e5-84cc-957843c68e71",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "3c8a9325-e512-4dec-be72-36bb6bfba3ca",
+          "source": "e70e8fc9-450a-477d-8c86-96486ecf933e",
+          "target": "5f26f4ff-2637-433d-910a-d8c53b856426",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "669d3b07-a3e1-40df-8813-28dbd80cd706",
+          "source": "1b2ba79e-287b-4e9f-93a6-ac8a4b977f7e",
+          "target": "cdb4f319-ecb1-4913-bf5b-3c35b377856b",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#ed7d31",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        }
+      ],
+      "lanes": [
+        {
+          "id": "4e2c018a-6b65-480e-82c5-771c5ed06ada",
+          "name": "Flagship",
+          "y": 60,
+          "h": 339,
+          "collapsed": false
+        },
+        {
+          "id": "db772b8c-bb38-43b7-b7ed-81f500886b58",
+          "name": "Premium",
+          "y": 399,
+          "h": 339,
+          "collapsed": false
+        },
+        {
+          "id": "72b5a7e5-b0e0-4b80-82cc-80784e85764f",
+          "name": "Mainstream",
+          "y": 738,
+          "h": 428,
+          "collapsed": false
+        }
+      ],
+      "timeline": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "roadConfig": {
+        "laneField": "Class",
+        "timeField": "Year",
+        "sortField": "Tier",
+        "autoSync": true,
+        "laneHeight": 190,
+        "timeCellWidth": 300,
+        "laneOrderByField": {
+          "Class": [
+            "Flagship",
+            "Premium",
+            "Mainstream"
+          ]
+        }
+      },
+      "showRelationships": true,
+      "showRelationshipLabels": false
+    },
+    {
+      "id": "5a20968b-0f17-44a4-b1a0-1cc28bda173d",
+      "name": "Chip Sum",
+      "nodes": [
+        {
+          "id": "fab49aae-0948-45c3-987f-1b7d827583f3",
+          "title": "Dimensity\n9000",
+          "description": "",
+          "x": 510,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2021",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "be880d2f-b2a1-41cd-93f6-83a9366901d1",
+          "title": "Dimensity\n9400",
+          "description": "",
+          "x": 1410,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2024",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "aa5724ac-6789-47a6-a055-19136a881c69",
+          "title": "Dimensity\n9300",
+          "description": "",
+          "x": 1110,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2023",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "d6cfecf7-4648-4135-9ff1-60bd536f8da5",
+          "title": "Dimensity\n9500",
+          "description": "",
+          "x": 1710,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "6491b7f7-de67-4524-843d-f92798554c1a",
+          "title": "Dimensity\n9600 Pro",
+          "description": "",
+          "x": 2010,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "2nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "9b7801bd-ff31-46e3-b358-8015a059cfa1",
+          "title": "Dimensity\n9200",
+          "description": "",
+          "x": 810,
+          "y": 110,
+          "w": 180,
+          "h": 96,
+          "laneId": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2022",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Smartphone",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "61bbb0f7-5358-4c04-881f-1668b4822a99",
+          "title": "Kompanio Ultra\n910",
+          "description": "",
+          "x": 1710,
+          "y": 1036,
+          "w": 180,
+          "h": 96,
+          "laneId": "1f0e18b8-b040-4d7a-aefd-10e79746c8ec",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Computing",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "04ef3d56-038a-4c9b-a171-54268b9df8ea",
+          "title": "Dimensity AX\nC-X1",
+          "description": "",
+          "x": 1710,
+          "y": 311,
+          "w": 180,
+          "h": 96,
+          "laneId": "24d4f9f7-4f95-47c0-9e17-d7b328d71faf",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Automotive",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "33586761-b6bd-4871-b752-dcc7de85654d",
+          "title": "Dimensity AX\nT-X1",
+          "description": "",
+          "x": 1710,
+          "y": 444,
+          "w": 180,
+          "h": 96,
+          "laneId": "24d4f9f7-4f95-47c0-9e17-d7b328d71faf",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2025",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Automotive",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "37c7da6e-02cd-4db4-bdd7-c2e28e4daba0",
+          "title": "Mediatek \nM70/T750",
+          "description": "",
+          "x": 210,
+          "y": 645,
+          "w": 180,
+          "h": 96,
+          "laneId": "66518885-b648-42a8-85d0-ea96e132448d",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2020",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Cellular",
+            "Process": "7nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "622d2beb-6e6a-400f-9508-fa7d471f1e3a",
+          "title": "Filogic 830",
+          "description": "",
+          "x": 210,
+          "y": 846,
+          "w": 180,
+          "h": 96,
+          "laneId": "c4c753ac-d456-4056-aed2-24bff9edff30",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2020",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Connectivity",
+            "Process": "12nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "aae36411-ccf2-4b2a-bd28-5e60579f9a01",
+          "title": "Filogic 880",
+          "description": "",
+          "x": 810,
+          "y": 846,
+          "w": 180,
+          "h": 96,
+          "laneId": "c4c753ac-d456-4056-aed2-24bff9edff30",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2022",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Connectivity",
+            "Process": "6nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "9967a452-90e6-4f11-947c-8e001a85465f",
+          "title": "Filogic 8000",
+          "description": "",
+          "x": 2010,
+          "y": 846,
+          "w": 180,
+          "h": 96,
+          "laneId": "c4c753ac-d456-4056-aed2-24bff9edff30",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Connectivity",
+            "Process": "6nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "221224c2-320d-4a35-9816-6fca9bd089a7",
+          "title": "Mediatek \nM80/T830",
+          "description": "",
+          "x": 810,
+          "y": 645,
+          "w": 180,
+          "h": 96,
+          "laneId": "66518885-b648-42a8-85d0-ea96e132448d",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2022",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Cellular",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "711b90bb-dffe-4fa7-8bf2-3a8ac432d6f9",
+          "title": "Mediatek \nM90/T900",
+          "description": "",
+          "x": 1410,
+          "y": 645,
+          "w": 180,
+          "h": 96,
+          "laneId": "66518885-b648-42a8-85d0-ea96e132448d",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2024",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Cellular",
+            "Process": "4nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "b300cab1-a506-4e51-b32b-59aa09749b90",
+          "title": "Dimensity CX\nC10 Max",
+          "description": "",
+          "x": 2010,
+          "y": 1036,
+          "w": 180,
+          "h": 96,
+          "laneId": "1f0e18b8-b040-4d7a-aefd-10e79746c8ec",
+          "parentId": null,
+          "color": "#c65911",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Computing",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        },
+        {
+          "id": "6151069d-a7e8-4d00-b4d8-a795bc0c6faa",
+          "title": "RTX Spark\nGB10",
+          "description": "",
+          "x": 2010,
+          "y": 1169,
+          "w": 180,
+          "h": 96,
+          "laneId": "1f0e18b8-b040-4d7a-aefd-10e79746c8ec",
+          "parentId": null,
+          "color": "#548235",
+          "fields": {
+            "Year": "2026",
+            "Tier": "0",
+            "Company": "Mediatek",
+            "Category": "Computing",
+            "Process": "3nm",
+            "Class": "Flagship"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "6e61cff6-8779-44d5-ba12-70823d337bf8",
+          "source": "fab49aae-0948-45c3-987f-1b7d827583f3",
+          "target": "9b7801bd-ff31-46e3-b358-8015a059cfa1",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "23293d72-ddf6-427c-b75e-159e47dc0686",
+          "source": "aa5724ac-6789-47a6-a055-19136a881c69",
+          "target": "be880d2f-b2a1-41cd-93f6-83a9366901d1",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "3ce71dfe-2f30-492a-b10c-9feb8da67d5b",
+          "source": "9b7801bd-ff31-46e3-b358-8015a059cfa1",
+          "target": "aa5724ac-6789-47a6-a055-19136a881c69",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "3e7d9226-83d1-4698-9c4a-e8bb10a7e90f",
+          "source": "be880d2f-b2a1-41cd-93f6-83a9366901d1",
+          "target": "d6cfecf7-4648-4135-9ff1-60bd536f8da5",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "ba3afd80-595a-4fbf-bf1c-28329bcd4f44",
+          "source": "d6cfecf7-4648-4135-9ff1-60bd536f8da5",
+          "target": "6491b7f7-de67-4524-843d-f92798554c1a",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "4d171abb-df12-4ed9-a91b-6c0253b96a83",
+          "source": "37c7da6e-02cd-4db4-bdd7-c2e28e4daba0",
+          "target": "221224c2-320d-4a35-9816-6fca9bd089a7",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "2938760a-7e42-4f0b-b8ba-2d47cc9c0101",
+          "source": "221224c2-320d-4a35-9816-6fca9bd089a7",
+          "target": "711b90bb-dffe-4fa7-8bf2-3a8ac432d6f9",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "cc467f17-9488-4faa-bfe2-efafe99099b5",
+          "source": "622d2beb-6e6a-400f-9508-fa7d471f1e3a",
+          "target": "aae36411-ccf2-4b2a-bd28-5e60579f9a01",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        },
+        {
+          "id": "7b70d8ae-5b39-4b60-ba72-9a227a83f633",
+          "source": "aae36411-ccf2-4b2a-bd28-5e60579f9a01",
+          "target": "9967a452-90e6-4f11-947c-8e001a85465f",
+          "type": "depends_on",
+          "label": "depends",
+          "color": "#7F7F7F",
+          "visible": true,
+          "style": "solid",
+          "showLabel": true
+        }
+      ],
+      "lanes": [
+        {
+          "id": "83e32e2e-3a4a-4701-b54c-d21896cd1bc9",
+          "name": "Smartphone",
+          "y": 60,
+          "h": 205,
+          "collapsed": false
+        },
+        {
+          "id": "24d4f9f7-4f95-47c0-9e17-d7b328d71faf",
+          "name": "Automotive",
+          "y": 265,
+          "h": 338,
+          "collapsed": false
+        },
+        {
+          "id": "66518885-b648-42a8-85d0-ea96e132448d",
+          "name": "Cellular",
+          "y": 603,
+          "h": 205,
+          "collapsed": false
+        },
+        {
+          "id": "c4c753ac-d456-4056-aed2-24bff9edff30",
+          "name": "Connectivity",
+          "y": 808,
+          "h": 190,
+          "collapsed": false
+        },
+        {
+          "id": "1f0e18b8-b040-4d7a-aefd-10e79746c8ec",
+          "name": "Computing",
+          "y": 998,
+          "h": 338,
+          "collapsed": false
+        }
+      ],
+      "timeline": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "roadConfig": {
+        "laneField": "Category",
+        "timeField": "Year",
+        "sortField": "Tier",
+        "autoSync": true,
+        "laneHeight": 190,
+        "timeCellWidth": 300,
+        "laneOrderByField": {
+          "Category": [
+            "Smartphone",
+            "Automotive",
+            "Cellular",
+            "Connectivity",
+            "Computing"
+          ],
+          "Year": [
+            "2021",
+            "2022",
+            "2023",
+            "2025"
+          ],
+          "Company": [
+            "Mediatek"
+          ]
+        }
+      },
+      "showRelationships": true,
+      "showRelationshipLabels": false
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "0eaabff7-d88d-4b56-ad00-fdfaab8b524b",
+      "at": "2026-10-22T13:06:33.611Z",
+      "name": "Snapshot 1",
+      "data": {
+        "name": "My Roadmap",
+        "theme": "orange",
+        "activePageId": "73a3af52-5aa4-4fc4-8c11-e63043194a46",
+        "pages": [
+          {
+            "id": "73a3af52-5aa4-4fc4-8c11-e63043194a46",
+            "name": "Technology",
+            "nodes": [
+              {
+                "id": "42bdf836-9a58-438e-8d9d-072fb409d923",
+                "title": "A14 Bionic",
+                "description": "",
+                "status": "Done",
+                "x": 196,
+                "y": 110,
+                "w": 180,
+                "h": 86,
+                "laneId": "171599a2-b0df-4b5f-a24a-70d0eb2f2072",
+                "parentId": null,
+                "fields": {
+                  "Category": "SP",
+                  "Year": "2020",
+                  "Process": "5nm",
+                  "Class": "Flagship",
+                  "Company": "Apple"
+                },
+                "linkPageId": null
+              },
+              {
+                "id": "28a7be03-67ac-47c7-83f1-fd8419d6fa96",
+                "title": "A15 Bionic",
+                "description": "",
+                "status": "Done",
+                "x": 496,
+                "y": 110,
+                "w": 180,
+                "h": 86,
+                "laneId": "171599a2-b0df-4b5f-a24a-70d0eb2f2072",
+                "parentId": null,
+                "fields": {
+                  "Category": "SP",
+                  "Year": "2021",
+                  "Process": "5nm",
+                  "Class": "Flagship",
+                  "Company": "Apple"
+                },
+                "linkPageId": null
+              }
+            ],
+            "edges": [
+              {
+                "id": "dc26647f-493e-45f6-b524-ce9cfa702220",
+                "source": "42bdf836-9a58-438e-8d9d-072fb409d923",
+                "target": "28a7be03-67ac-47c7-83f1-fd8419d6fa96",
+                "type": "depends_on",
+                "label": "depends"
+              }
+            ],
+            "lanes": [
+              {
+                "id": "171599a2-b0df-4b5f-a24a-70d0eb2f2072",
+                "name": "5nm",
+                "y": 60,
+                "h": 190,
+                "collapsed": false
+              }
+            ],
+            "timeline": [
+              "2020",
+              "2021"
+            ],
+            "roadConfig": {
+              "laneField": "Process",
+              "timeField": "Year",
+              "autoSync": true,
+              "laneHeight": 190,
+              "timeCellWidth": 300
+            }
+          }
+        ],
+        "snapshots": [],
+        "globalStyles": {
+          "radius": 12,
+          "padding": 12,
+          "edge": 2
+        },
+        "version": 2
+      }
+    }
+  ],
+  "globalStyles": {
+    "radius": 12,
+    "padding": 12,
+    "edge": 2
+  },
+  "version": 2,
+  "settings": {
+    "displayMode": "launchDark",
+    "displayFields": [
+      "Process",
+      "Field"
+    ],
+    "nodeContentCollapsed": false,
+    "nodeStyle": "header",
+    "uiRev": 34,
+    "multiPageRev": 1
+  }
+}
