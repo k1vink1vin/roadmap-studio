@@ -332,7 +332,118 @@ function undo(){if(!undoStack.length)return;redoStack.push(historyString());trim
 function newProject(){edgeRouteCache.clear();undoStack.length=0;redoStack.length=0;if(!confirm('建立新專案？目前內容會由自動儲存保留，但畫面將切換至空白專案。'))return;pushHistory();project=blankProject();selected.clear();zoom=1;pan={x:0,y:0};renderAll();saveLocal()}
 function download(name,blob){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
 function exportProject(){download((project.name||'roadmap')+'.roadmap',new Blob([JSON.stringify(project,null,2)],{type:'application/json'}));toast('已匯出專案')}
-$('#importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!d.pages)throw Error();pushHistory();project=d;edgeRouteCache.clear();undoStack.length=0;redoStack.length=0;ensureProjectV2();for(const pg of project.pages){ensurePageV2(pg);if(!pg.roadConfig.laneField||pg.roadConfig.laneField==='Category'){const keys=new Set(pg.nodes.flatMap(n=>Object.keys(n.fields||{})));if(keys.has('Product Line'))pg.roadConfig.laneField='Product Line';else if(keys.has('Category'))pg.roadConfig.laneField='Category';else if(pg.lanes?.length){const idToName=new Map(pg.lanes.map(l=>[l.id,l.name]));pg.roadConfig.laneField='Swimlane';pg.nodes.forEach(n=>{n.fields??={};if(!n.fields.Swimlane)n.fields.Swimlane=idToName.get(n.laneId)||'General'})}}if(!pg.roadConfig.timeField||pg.roadConfig.timeField==='Year'){const keys=new Set(pg.nodes.flatMap(n=>Object.keys(n.fields||{})));if(keys.has('Generation'))pg.roadConfig.timeField='Generation';else if(keys.has('Quarter'))pg.roadConfig.timeField='Quarter';else if(keys.has('Year'))pg.roadConfig.timeField='Year'}const old=project.activePageId;project.activePageId=pg.id;syncRoadmapDimensions(true);project.activePageId=old}selected.clear();renderAll();saveLocal();toast('匯入完成，已升級為 V2')}catch(err){alert('無法讀取此 Roadmap 檔案')}e.target.value=''})
+function loadProjectData(d,message='已載入專案'){
+ if(!d?.pages)throw new Error('invalid roadmap');
+ project=d;edgeRouteCache.clear();undoStack.length=0;redoStack.length=0;ensureProjectV2();
+ for(const pg of project.pages){
+  ensurePageV2(pg);
+  if(!pg.roadConfig.laneField||pg.roadConfig.laneField==='Category'){
+   const keys=new Set(pg.nodes.flatMap(n=>Object.keys(n.fields||{})));
+   if(keys.has('Product Line'))pg.roadConfig.laneField='Product Line';
+   else if(keys.has('Category'))pg.roadConfig.laneField='Category';
+   else if(pg.lanes?.length){const idToName=new Map(pg.lanes.map(l=>[l.id,l.name]));pg.roadConfig.laneField='Swimlane';pg.nodes.forEach(n=>{n.fields??={};if(!n.fields.Swimlane)n.fields.Swimlane=idToName.get(n.laneId)||'General'})}
+  }
+  if(!pg.roadConfig.timeField||pg.roadConfig.timeField==='Year'){
+   const keys=new Set(pg.nodes.flatMap(n=>Object.keys(n.fields||{})));
+   if(keys.has('Generation'))pg.roadConfig.timeField='Generation';else if(keys.has('Quarter'))pg.roadConfig.timeField='Quarter';else if(keys.has('Year'))pg.roadConfig.timeField='Year'
+  }
+  const active=project.activePageId;project.activePageId=pg.id;syncRoadmapDimensions(true);project.activePageId=active
+ }
+ selected.clear();selectedEdge=null;selectedEdges.clear();zoom=1;pan={x:0,y:0};renderAll();saveLocalNow();fitView();toast(message)
+}
+$('#importFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{loadProjectData(JSON.parse(await file.text()),'匯入完成，已升級為 V2')}catch(err){alert('無法讀取此 Roadmap 檔案')}e.target.value=''})
+
+const GH_CONFIG_KEY='roadmap-studio-github-config',GH_TOKEN_KEY='roadmap-studio-github-token';
+function githubConfig(){
+ let saved={};try{saved=JSON.parse(localStorage.getItem(GH_CONFIG_KEY)||'{}')||{}}catch(e){}
+ return {
+  owner:($('#ghOwner')?.value||saved.owner||'k1vink1vin').trim(),
+  repo:($('#ghRepo')?.value||saved.repo||'roadmap-studio').trim(),
+  branch:($('#ghBranch')?.value||saved.branch||'main').trim(),
+  folder:($('#ghFolder')?.value||saved.folder||'projects').trim().replace(/^\/+|\/+$/g,'')
+ }
+}
+function saveGithubConfig(){
+ const cfg=githubConfig();localStorage.setItem(GH_CONFIG_KEY,JSON.stringify(cfg));
+ const token=$('#ghToken')?.value?.trim();if(token)sessionStorage.setItem(GH_TOKEN_KEY,token);return cfg
+}
+function githubToken(){return ($('#ghToken')?.value||sessionStorage.getItem(GH_TOKEN_KEY)||'').trim()}
+function githubStatus(msg,type=''){const el=$('#ghStatus');if(!el)return;el.textContent=msg;el.className='github-status '+type}
+function githubApiPath(path){return String(path||'').split('/').filter(Boolean).map(encodeURIComponent).join('/')}
+async function githubRequest(path,{method='GET',body=null,allow404=false}={}){
+ const cfg=saveGithubConfig(),token=githubToken();
+ const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${githubApiPath(path)}${method==='GET'?`?ref=${encodeURIComponent(cfg.branch)}`:''}`;
+ const headers={'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+ if(token)headers.Authorization=`Bearer ${token}`;
+ if(body)headers['Content-Type']='application/json';
+ const res=await fetch(url,{method,headers,body:body?JSON.stringify(body):undefined});
+ if(allow404&&res.status===404)return null;
+ let data=null;try{data=await res.json()}catch(e){}
+ if(!res.ok)throw new Error(data?.message||`GitHub HTTP ${res.status}`);
+ return data
+}
+function textToBase64(text){
+ const bytes=new TextEncoder().encode(text);let bin='';const step=0x8000;
+ for(let i=0;i<bytes.length;i+=step)bin+=String.fromCharCode(...bytes.subarray(i,i+step));
+ return btoa(bin)
+}
+function base64ToText(value){
+ const bin=atob(String(value||'').replace(/\s/g,'')),bytes=new Uint8Array(bin.length);
+ for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+ return new TextDecoder().decode(bytes)
+}
+function defaultGithubFileName(){
+ const base=String(project.name||'roadmap').trim().replace(/[\\/:*?"<>|]+/g,'-').replace(/\s+/g,'-').replace(/^-+|-+$/g,'')||'roadmap';
+ return base+'.roadmap.json'
+}
+function openGitHubStorage(){
+ const cfg=githubConfig();$('#ghOwner').value=cfg.owner;$('#ghRepo').value=cfg.repo;$('#ghBranch').value=cfg.branch;$('#ghFolder').value=cfg.folder;
+ $('#ghToken').value=sessionStorage.getItem(GH_TOKEN_KEY)||'';$('#ghFileName').value=defaultGithubFileName();
+ $('#githubModal').classList.add('show');githubStatus('');refreshGitHubProjects()
+}
+function closeGitHubStorage(){$('#githubModal').classList.remove('show')}
+async function refreshGitHubProjects(){
+ const list=$('#ghProjectList');if(!list)return;list.innerHTML='<div class="empty">正在讀取 GitHub…</div>';githubStatus('正在連線 GitHub…');
+ try{
+  const cfg=saveGithubConfig(),data=await githubRequest(cfg.folder);
+  const files=(Array.isArray(data)?data:[]).filter(x=>x.type==='file'&&(x.name.endsWith('.roadmap.json')||x.name.endsWith('.roadmap')||x.name.endsWith('.json'))).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+  list.innerHTML='';
+  if(!files.length){list.innerHTML='<div class="empty">這個資料夾目前沒有 Roadmap 專案。</div>';githubStatus('已連線，沒有專案','ok');return}
+  for(const item of files){
+   const row=document.createElement('div');row.className='github-project-row';
+   const meta=document.createElement('div');meta.className='github-project-meta';
+   const name=document.createElement('b');name.textContent=item.name;const sha=document.createElement('small');sha.textContent=(item.sha||'').slice(0,8);
+   meta.append(name,sha);
+   const actions=document.createElement('div');actions.className='github-project-actions';
+   const load=document.createElement('button');load.className='tb';load.textContent='讀取';load.onclick=()=>loadProjectFromGitHub(item.path);
+   const use=document.createElement('button');use.className='tb';use.textContent='覆寫此檔';use.onclick=()=>{$('#ghFileName').value=item.name;saveProjectToGitHub()};
+   actions.append(load,use);row.append(meta,actions);list.appendChild(row)
+  }
+  githubStatus(`已讀取 ${files.length} 個 GitHub 專案`,'ok')
+ }catch(err){list.innerHTML='<div class="empty">無法讀取 GitHub 專案。</div>';githubStatus('讀取失敗：'+err.message,'error')}
+}
+async function saveProjectToGitHub(){
+ const cfg=saveGithubConfig(),token=githubToken();if(!token){githubStatus('儲存需要 GitHub token。','error');$('#ghToken').focus();return}
+ let name=($('#ghFileName').value||defaultGithubFileName()).trim().replace(/^\/+|\/+$/g,'');
+ if(!/\.(roadmap\.json|roadmap|json)$/i.test(name))name+='.roadmap.json';
+ const path=[cfg.folder,name].filter(Boolean).join('/');
+ githubStatus('正在儲存到 GitHub…');
+ try{
+  const existing=await githubRequest(path,{allow404:true});
+  const body={message:`Save Roadmap: ${name}`,content:textToBase64(JSON.stringify(project,null,2)),branch:cfg.branch};
+  if(existing?.sha)body.sha=existing.sha;
+  await githubRequest(path,{method:'PUT',body});
+  $('#ghFileName').value=name;githubStatus('已儲存到 GitHub：'+path,'ok');toast('GitHub 儲存完成');refreshGitHubProjects()
+ }catch(err){githubStatus('儲存失敗：'+err.message,'error')}
+}
+async function loadProjectFromGitHub(path){
+ if(!confirm(`從 GitHub 讀取「${path.split('/').pop()}」？目前專案會被取代。`))return;
+ githubStatus('正在讀取 '+path+'…');
+ try{
+  const file=await githubRequest(path),d=JSON.parse(base64ToText(file.content));
+  loadProjectData(d,'GitHub 專案讀取完成');$('#ghFileName').value=path.split('/').pop();githubStatus('已讀取：'+path,'ok');closeGitHubStorage()
+ }catch(err){githubStatus('讀取失敗：'+err.message,'error')}
+}
 function takeSnapshot(){project.snapshots??=[];project.snapshots.push({id:uid(),at:new Date().toISOString(),name:'Snapshot '+(project.snapshots.length+1),data:deep({...project,snapshots:[]})});if(project.snapshots.length>SNAPSHOT_LIMIT)project.snapshots.shift();saveLocal();toast('已建立版本快照')}
 function fitView(){const p=page(),ns=p.nodes.filter(nodeVisible),r=vp.getBoundingClientRect();if(!ns.length&&!p.timeline?.length){zoom=1;pan={x:0,y:0};applyTransform();return}const cfg=p.roadConfig||{},cellW=cfg.timeCellWidth||300;const nodeMinX=ns.length?Math.min(...ns.map(n=>n.x)):150,nodeMinY=ns.length?Math.min(...ns.map(n=>n.y)):60;const nodeMaxX=ns.length?Math.max(...ns.map(n=>n.x+n.w)):150,nodeMaxY=ns.length?Math.max(...ns.map(n=>n.y+nodeRenderHeight(n))):60;const laneMaxY=p.lanes?.length?Math.max(...p.lanes.map(l=>l.y+l.h)):nodeMaxY;const timelineMaxX=150+Math.max(1,p.timeline?.length||0)*cellW;const minX=Math.min(0,nodeMinX),minY=Math.min(0,nodeMinY),maxX=Math.max(timelineMaxX,nodeMaxX),maxY=Math.max(60,laneMaxY,nodeMaxY);const padX=56,padY=44,bw=Math.max(1,maxX-minX),bh=Math.max(1,maxY-minY);zoom=Math.max(.2,Math.min(1.25,Math.min((r.width-padX*2)/bw,(r.height-padY*2)/bh)));pan.x=(r.width-bw*zoom)/2-minX*zoom;pan.y=(r.height-bh*zoom)/2-minY*zoom;applyTransform();toast('已適合完整 Roadmap 畫面')}
 function zoomBy(d){zoom=Math.max(.2,Math.min(2.5,zoom+d));applyTransform()}
@@ -388,6 +499,6 @@ function selfTest(){const out=[];const assert=(name,cond)=>out.push({name,ok:!!c
 a.x=0;a.y=200;a.w=180;a.h=70;b.x=320;b.y=100;b.w=180;b.h=70;const rq=smartEdgePath(p.edges[0]),vxs=[];for(let i=0;i<(rq?.points?.length||0)-1;i++){const u=rq.points[i],v=rq.points[i+1];if(u.x===v.x&&u.y!==v.y)vxs.push(u.x)}assert('V3.12 分支轉彎靠近目標端',vxs.length===0||Math.min(...vxs.map(x=>Math.abs(x-(b.x-30))))<80);
 project.settings.nodeContentCollapsed=true;a.title='Line 1\nLine 2';assert('V3.12 摺疊時多行標題仍增加高度',nodeRenderHeight(a)>52);project.settings.nodeContentCollapsed=false;
 project.settings.displayFields=['不存在欄位'];a.fields={Product:'CPU',Year:'2026'};assert('V3.12 顯示欄位失效時回退到本頁欄位',effectiveDisplayFields().includes('Product')&&visibleFieldEntries(a).length>0);assert('V3.12 節點內容控制元件存在',!!document.getElementById('expandNodeContent')&&!!document.getElementById('collapseNodeContent'));assert('V3.12 顯示欄位容器存在',!!document.getElementById('displayFields'));selected=new Set([a.id,c.id]);align('left');assert('左對齊',a.x===c.x);takeSnapshot();a.title='A2';assert('版本快照保留',project.snapshots.length===1);const saved=JSON.stringify(project);const parsed=JSON.parse(saved);assert('V2專案JSON序列化',parsed.version===2&&parsed.pages[0].roadConfig.laneField==='Product');assert('循環依賴初始為false',!hasCycle(a.id));p.edges.push({id:uid(),source:b.id,target:a.id,type:'depends_on'});assert('循環依賴偵測',hasCycle(a.id));const result=document.createElement('pre');result.id='selftest-result';result.textContent=JSON.stringify({ok:out.every(x=>x.ok),tests:out},null,2);document.body.appendChild(result);document.title='SELFTEST '+(out.every(x=>x.ok)?'PASS':'FAIL')}catch(err){document.getElementById('selftest-result')?.remove();const result=document.createElement('pre');result.id='selftest-error';result.textContent=JSON.stringify({ok:false,error:String(err),tests:out},null,2);document.body.appendChild(result);document.title='SELFTEST FAIL'}}
-window.RoadmapApp={flushPendingCanvas,resetGlobalStyles,addNode,addParentNode,showAllRelationships,duplicateSelected,copySelectedNode,pasteCopiedNode,applyCopiedStyle,addChildNode,addLane,align,distribute,sameSize,autoLayout,syncRoadmapLayout,batchColor,undo,redo,newProject,exportProject,takeSnapshot,fitView,zoomBy,toggleSearch,togglePresentation,exportPNG,exportHTML,openTemplates,closeTemplates,applyTemplate};
+window.RoadmapApp={flushPendingCanvas,resetGlobalStyles,addNode,addParentNode,showAllRelationships,duplicateSelected,copySelectedNode,pasteCopiedNode,applyCopiedStyle,addChildNode,addLane,align,distribute,sameSize,autoLayout,syncRoadmapLayout,batchColor,undo,redo,newProject,exportProject,takeSnapshot,fitView,zoomBy,toggleSearch,togglePresentation,exportPNG,exportHTML,openTemplates,closeTemplates,applyTemplate,openGitHubStorage,closeGitHubStorage,refreshGitHubProjects,saveProjectToGitHub,loadProjectFromGitHub};
 let firstBoot=!embedded; if(!embedded){try{const local=JSON.parse(localStorage.getItem('roadmap-studio-autosave')||'null');if(local?.pages){project=local;firstBoot=false}}catch(e){}}
 ensureProjectV2();renderAll();setTimeout(()=>{if(firstBoot&& !location.search.includes('selftest=1'))applyTemplate('technology');fitView();if(location.search.includes('selftest=1'))selfTest()},50);
